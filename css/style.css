@@ -1,145 +1,142 @@
-/*
- * Cascading Style Sheet pour :
- * « Réalisation D’Un Site Web 1 » -- Laboratoire 2 -- « RealDecoy »
- * -----------------------------------------------------------------
- * Auteur : Benjamin Goudreault
- * Version : `v3`
- *
- * Bonjour François ! Voici mon `web1-tp2`, troisième version «finale» ;
- * bon d’accord j’avais dis que je ne t’enverrais pas de version après
- * la `v2`, mais comme tu a dis en classe qu’il ne devait pas y avoir
- * d’attribut `height` dans le <div id="container">, voici mon RealDecoy
- * modifié selon tes spécifications.
- *
- * À plus tard !
- */
+* {
+    padding: 0;
+    margin: 0
+} 
 
-* {padding: 0; margin: 0;}   /* Réinitialise le padding et les marges */ 
-
-body {                             /* Arrière-plan, ou « background » */
-background-color: #9EBDE3;
-padding-top: 28px;
-text-align: center;
-font-family: Verdana, Helvetica, Sans-Serif;
-color: #333;
+body {
+    background-color: #9ebde3;
+    padding-top: 28px;
+    text-align: center;
+    font-family: Verdana, Helvetica, sans-serif;
+    color: #333
 }
-#container {                        /* « Bloc » central, ou principal */
-background-color: #FFF;
-width: 711px;
-padding: 30px 25px 60px;
-border: 1px solid #000;
-margin: 0 auto;
-text-align: left;
-}                                                                    /*
-                                                 Valeurs par défaut ? *
-                                                 ==================== */
-h1,h2,h3,h4,p,a {font-family: Verdana, Arial, Helvetica, Sans-Serif;}
+#container {
+    background-color: #fff;
+    width: 711px;
+    padding: 30px 25px 60px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    text-align: left
+}
 
-h2 {font-size: 16px; color: #A70909;}
+h1, h2, h3, h4, p, a { font-family: Verdana, Arial, Helvetica, sans-serif }
 
-h3 {font-size: 14px; color: #363636;}
+h2 {
+    font-size: 16px;
+    color: #a70909
+}
+h3 {
+    font-size: 14px;
+    color: #363636
+}
+h4 {
+    font-size: 12px;
+    color: #a70909
+}
+a img { border: none }
+p { font-size: 11px }
 
-h4 {font-size: 12px; color: #A70909;}
+#top {
+    background-color: #84aad9;
+    width: 100%;
+    height: 198px;
+    position: relative
+}
+#topLeft {
+    background-color: #9ebde3;
+    width: 283px;
+    height: 197px;
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left
+}
+#topLeft img {
+    position: absolute;
+    top: 77px;
+    left: 16px
+}
+#topRight {
+    width: 428px;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left
+}
+#topRight img {
+    position: absolute;
+    bottom: 0;
+    right: 0
+}
+#mainNav {
+    background: url(../images/menu-bg.gif) 0 0 repeat-y;
+    width: 100%; height: 28px;
+    text-align: right
+}
+#mainNav ul { padding: 4px 17px 0 }
 
-a img {border: none;}
-
-p {font-size: 11px;}
-                                                                     /*
-                   Début des éléments se trouvant dans « #container » *
-                   ================================================== */
-#top {                       /* Genre d’« en-tête », ou de « header » */
-background-color: #84AAD9;
-width: 100%; height: 198px;
-position: relative;
-        }
-        #topLeft {                                    /* Ça va de soi */
-        background-color: #9EBDE3;
-        width: 283px; height: 197px;
-        position: relative; top: 0; left: 0;
-        float: left;
-                }
-                #topLeft img {           /* Petit canard jaune (logo) */
-                position: absolute; top: 77px; left: 16px;
-                }
-        #topRight {                                   /* Ça va de soi */
-        width: 428px; height: 100%;
-        position: relative; top: 0; left: 0;
-        float: left;
-                }
-                #topRight img {                   /* Gros canard bleu */
-                position: absolute; bottom: 0; right: 0;
-                }
-#mainNav {                /* Barre de navigation rouge-dégradée-noire */
-/*background-image: url(../images/menu-bg.gif);
-background-repeat: repeat-y;*/
-background: url(../images/menu-bg.gif) 0 0 repeat-y;
-width: 100%; height: 28px;
-text-align: right;
-        }
-        #mainNav ul {            /* Liste, ou menu, dans ladite barre */
-        padding: 4px 17px 0;
-        }
-        #mainNav ul li {      /* Items de ladite liste, ou dudit menu */
-        list-style-type: none; display: inline;
-        font-family:  Arial, Verdana, Helvetica, Sans-Serif;
-        font-size: 14px;
-        letter-spacing: -0.82px;
-        color: #FFF;
-        }
-        #mainNav ul li a {        /* Items cliquables dans ledit menu */
-        margin: 0 2px 0 5px;
-        text-decoration: none;
-        color: inherit;
-        }
-#bottomSection {                                      /* Ça va de soi */
-padding-top: 21px;
-overflow: auto;
-        }
-        #bottomLeft {       /* Image de petite flèche rouge encerclée */
-        background: url(../images/arrow.gif) 3px 31px no-repeat;
-        width: 263px; height: 51px;
-        margin: 3px auto;
-        float: left;
-                }
-                #bottomLeft h3 {          /* Titre de « #bottomLeft » */
-                font-family: Georgia, "Times New Roman", Serif;
-                line-height: 200%;
-                font-size: 13px;
-                color: #363636;
-                }
-                #bottomLeft h4 a {            /* Sous-titre cliquable */
-                width: 233px;
-                margin-top: 9px;
-                float: right;
-                text-decoration: none;
-                font-size: 11px;
-                color: #A70909;
-                }
-                #bottomLeft p {      /* Paragraphe de « #bottomLeft » */
-                width: 233px;
-                margin-top: 1.25em;
-                float: right;
-                line-height: 150%;
-                font-size: 10px;
-                }
-        #bottomRight {                                /* Ça va de soi */
-        width: 428px;
-        float: right;
-        font-size: 18px;
-                }
-                #bottomRight h2 {         /* Titre de « bottomRight » */
-                margin-bottom: 11px;
-                font-family: Georgia, "Times New Roman", Serif;
-                font-size: 16px;
-                }
-                #bottomRight p {    /* Paragraphes de « bottomRight » */
-                margin-top: 10px;
-                font-size: 10px;
-                line-height: 200%;
-                }
-                #bottomRight p a { /* Lien en fin de « #bottomRight » */
-                text-decoration: none;
-                font-weight: bold;
-                color: #A70909;
-                } /* Fin des éléments se trouvant dans « #container » *
-                     ================================================ */
+#mainNav ul li {
+    list-style-type: none;
+    display: inline;
+    font-family: Arial, Verdana, Helvetica, Sans-serif;
+    font-size: 14px;
+    letter-spacing: -0.82px;
+    color: #fff
+}
+#mainNav ul li a {
+    margin: 0 2px 0 5px;
+    text-decoration: none;
+    color: inherit
+}
+#bottomSection {
+    padding-top: 21px;
+    overflow: auto
+}
+#bottomLeft {
+    background: url(../images/arrow.gif) 3px 31px no-repeat;
+    width: 263px; height: 51px;
+    margin: 3px auto;
+    float: left
+}
+#bottomLeft h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 200%;
+    font-size: 13px;
+    color: #363636
+}
+#bottomLeft h4 a {
+    width: 233px;
+    margin-top: 9px;
+    float: right;
+    text-decoration: none;
+    font-size: 11px;
+    color: #a70909
+}
+#bottomLeft p {
+    width: 233px;
+    margin-top: 1.25em;
+    float: right;
+    line-height: 150%;
+    font-size: 10px
+}
+#bottomRight {
+    width: 428px;
+    float: right;
+    font-size: 18px
+}
+#bottomRight h2 {
+    margin-bottom: 11px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px
+}
+#bottomRight p {
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: 200%
+}
+#bottomRight p a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #a70909
+}
